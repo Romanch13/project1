@@ -14,6 +14,7 @@
 # TODO-3 - Check if the letter the user guessed (guess) is one of the leters in the chosen_word.
 # Print "display" and you should see the guessed letter in the correct position and every other letter replace with "_".
 # Hint - dont worry about getting the user to guess the next letter. We'll tackle that in step 3
+from reprlib import clear
 import random
 import hangman_words
 from hangman_words import word_list
@@ -42,6 +43,8 @@ for _ in range(word_length):
 
 while not end_of_game:
     guess = input("Guess a letter: ").lower()
+
+    clear()
 
     if guess in display:
         print(f"You've already guessed {guess}")
